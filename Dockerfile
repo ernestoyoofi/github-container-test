@@ -10,7 +10,7 @@ FROM alpine as app_bases
 
 WORKDIR /app
 
-COPY --from=building /backend/app /app/server
+COPY --from=building /building/app /app/server
 
 EXPOSE 3500
 ENTRYPOINT ["/app/server"]
