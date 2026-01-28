@@ -1,7 +1,7 @@
 FROM golang:1.25-alpine AS building
 
 WORKDIR /building
-COPY ./backend/ ./
+COPY . .
 ENV PRODUCTION_BUILD="true"
 RUN go mod tidy
 RUN go build -o /building/app .
